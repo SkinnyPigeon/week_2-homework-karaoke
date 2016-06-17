@@ -4,12 +4,11 @@ require_relative 'guests'
 
 class Reception
 
-  attr_reader(:bill, :drinks, :rooms)
+  attr_reader(:bill, :rooms)
 
   def initialize(name)
     @name = name
     @bill = bill
-    @drinks = drinks
     @rooms = []
   end
 

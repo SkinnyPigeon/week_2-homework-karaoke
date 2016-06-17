@@ -3,7 +3,7 @@ require_relative 'songs'
 require 'pry-byebug'
 class Room
 
-  attr_reader(:name, :guests, :capacity, :price)
+  attr_reader(:name, :guests, :capacity, :price, :beer, :wine, :jaeger_bomb)
   attr_accessor(:playlist)
 
   def initialize(name, capacity, price)
@@ -12,6 +12,9 @@ class Room
     @price = price
     @guests = []
     @playlist = []
+    @beer = 3.5
+    @wine = 5
+    @jaeger_bomb = 7.5
   end
 
   def add_song(song)
@@ -35,7 +38,7 @@ class Room
     @guests.length
   end
 
-
+  
 
 end
 

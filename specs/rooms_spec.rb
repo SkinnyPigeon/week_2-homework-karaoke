@@ -54,7 +54,10 @@ class RoomsTest < MiniTest::Test
     assert_equal(2, @room1.number_of_guests)
   end
 
-
+  def guest_can_buy_beer
+    @room1.guest.pays(@guest1, @room1.beer)
+    assert_equal(95, @guest1.cash)
+  end
 
 end
 

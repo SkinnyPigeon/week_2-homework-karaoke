@@ -31,6 +31,7 @@ class Guest
     guest.cash -= ammount
   end
 
+
 end
 
 
