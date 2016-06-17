@@ -22,7 +22,8 @@ class Guest
       puts "Come on in. Please drink a lot"
       return true
     else
-      return "Get out of here before Big Dave crushes your broke ass"
+      puts "Get out of here before Big Dave crushes your broke ass"
+      return false
     end
   end
 

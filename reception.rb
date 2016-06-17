@@ -4,17 +4,37 @@ require_relative 'guests'
 
 class Reception
 
-  attr_reader(:bill, :drinks)
+  attr_reader(:bill, :drinks, :rooms)
 
-  def initialize
+  def initialize(name)
+    @name = name
     @bill = bill
     @drinks = drinks
+    @rooms = []
   end
 
-  def welcome(name)
-    if name.can_afford 
-      add_guest(name)
+  def add_rooms(room)
+    @rooms << room
+  end
+
+  def number_of_rooms
+    @rooms.length
+  end 
+
+  def welcome(name, room)
+    if name.can_afford(room) == true
+      room.add_guest(name)
+      return true
     end
+      return false
   end
 
 end
+
+
+
+
+
+
+
+

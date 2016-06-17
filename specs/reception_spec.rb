@@ -19,7 +19,27 @@ class RoomsTest < MiniTest::Test
     @guest2=Guest.new("Stevie Winwood", "I'm Going To Kill Yo Mamma", 150)
     @guest3=Guest.new("The Entire Royal Philharmoic East Compton Rap Brigade's PA", "Deep Down In The Ole Pit", 10)
 
+    @reception=Reception.new("Big Dave's Big Boys Karaoke Shack")
+
+  end
+
+  def test_add_rooms_to_reception
+    @reception.add_rooms(@room1)
+    assert_equal( 1, @reception.number_of_rooms)
+  end   
+
+  def test_welcome
+    @reception.add_rooms(@room1)
+    @reception.add_rooms(@room2)
+    assert_equal( true, @reception.welcome(@guest1, @room1) )    
+    assert_equal( false, @reception.welcome(@guest3, @room2) )
   end
 
 
 end
+
+
+
+
+
+
