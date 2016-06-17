@@ -5,7 +5,7 @@ class Room
 
   def initialize(name)
     @name = name
-    @playlist = {}
+    @playlist = []
   end
 
 

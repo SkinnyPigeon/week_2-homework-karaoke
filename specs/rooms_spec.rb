@@ -13,7 +13,7 @@ class RoomsTest < MiniTest::Test
   end
 
   def test_room_has_playlist
-    assert_equal({}, @room.playlist)
+    assert_equal([], @room.playlist)
   end
 
 
