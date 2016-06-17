@@ -12,4 +12,8 @@ class RoomsTest < MiniTest::Test
     assert_equal("Nice 'n Sleezy", @room.name)
   end
 
+  def test_room_has_playlist
+    assert_equal("Smooth Jazz-Grime Fusion", @room.playlist)
+  end
+
 end
