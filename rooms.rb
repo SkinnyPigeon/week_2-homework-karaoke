@@ -1,9 +1,9 @@
-require_relative 'playlist'
 require_relative 'guests'
+require_relative 'songs'
 require 'pry-byebug'
 class Room
 
-  attr_reader(:name)
+  attr_reader(:name, :guests)
   attr_accessor(:playlist)
 
   def initialize(name)
@@ -20,4 +20,25 @@ class Room
     @playlist.length
   end
 
+  def add_guest(name)
+    @guests << name
+  end
+
+  def remove_guest(name)
+    @guests.delete(name)
+  end
+
+  def number_of_guests
+    @guests.length
+  end
+
+  def puts_guests
+    binding.pry
+    for guest in @guests
+      puts guest
+    end
+  end
+
 end
+
+
