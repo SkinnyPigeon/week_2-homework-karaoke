@@ -22,9 +22,5 @@ class RoomsTest < MiniTest::Test
     assert_equal([], @room.playlist)
   end
 
-  def test_add_song_to_playlist
-    # binding.pry
-    assert_equal("Deep Down In The Ole Pit", 
-  end
 
 end

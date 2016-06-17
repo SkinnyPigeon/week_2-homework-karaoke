@@ -1,4 +1,7 @@
 require_relative 'songs'
+require 'pry-byebug'
+
+
 
 class Playlist
 
@@ -9,9 +12,17 @@ class Playlist
     @playlist = playlist
   end
 
-  def default
+  def song_genre(name)
+
+    result = @songs.find  { |song| song.name == name }
+
+    return result.genre
+  end
+
+  def current_playlist
     @songs.length
   end
 
 
 end
+
