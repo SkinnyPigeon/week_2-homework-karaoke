@@ -5,7 +5,7 @@ require_relative '../rooms'
 class RoomsTest < MiniTest::Test
 
   def setup 
-    @room=Room.new("Nice 'n Sleezy", "Smooth Jazz-Grime Fusion")
+    @room=Room.new("Nice 'n Sleezy")
   end
 
   def test_room_has_name
@@ -13,7 +13,9 @@ class RoomsTest < MiniTest::Test
   end
 
   def test_room_has_playlist
-    assert_equal("Smooth Jazz-Grime Fusion", @room.playlist)
+    assert_equal({}, @room.playlist)
   end
+
+
 
 end
