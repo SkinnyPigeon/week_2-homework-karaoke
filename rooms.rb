@@ -11,6 +11,7 @@ class Room
     @capacity = capacity
     @price = price
     @guests = []
+    @groups = []
     @playlist = []
     @beer = 3.5
     @wine = 5
@@ -38,7 +39,15 @@ class Room
     @guests.length
   end
 
-  
+
+  def form_groups(names)
+    number_of_guests() < @capacity ? @groups << names : "Sorry pal, that's a firehazard. That could be my license."
+  end
+
+
+  def number_in_group
+    @groups.flatten.length
+  end
 
 end
 

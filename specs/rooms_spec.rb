@@ -18,6 +18,9 @@ class RoomsTest < MiniTest::Test
     @guest1=Guest.new("Jonny Big-Tash", "Slow Roast", 100)
     @guest2=Guest.new("Stevie Winwood", "I'm Going To Kill Yo Mamma", 150)
     @guest3=Guest.new("The Entire Royal Philharmoic East Compton Rap Brigade's PA", "Deep Down In The Ole Pit",15 )
+    @guest4=Guest.new("The Right Honarable Lt Hammy Cham Bum the 3rd MP OBE MBE", "Music Ain't No Thang", 50)
+
+    @groups = [@guest1, @guest2, @guest4]
 
   end
 
@@ -40,6 +43,11 @@ class RoomsTest < MiniTest::Test
     assert_equal(2,@room1.number_of_guests)
   end
 
+  def test_guest_can_check_in_groups
+    @room2.form_groups(@groups)
+    assert_equal(3, @room2.number_in_group)
+  end
+
   def test_remove_guest_from_room
     @room1.add_guest(@guest1)
     @room1.add_guest(@guest2)
@@ -54,10 +62,13 @@ class RoomsTest < MiniTest::Test
     assert_equal(2, @room1.number_of_guests)
   end
 
-  def guest_can_buy_beer
-    @room1.guest.pays(@guest1, @room1.beer)
-    assert_equal(95, @guest1.cash)
+  def test_guest_can_buy_beer
+    @guest1.pays(@guest1, @room1.beer)
+    assert_equal(96.5, @guest1.cash)
   end
+
+
+
 
 end
 

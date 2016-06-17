@@ -18,8 +18,11 @@ class RoomsTest < MiniTest::Test
     @guest1=Guest.new("Jonny Big-Tash", "Slow Roast", 100)
     @guest2=Guest.new("Stevie Winwood", "I'm Going To Kill Yo Mamma", 150)
     @guest3=Guest.new("The Entire Royal Philharmoic East Compton Rap Brigade's PA", "Deep Down In The Ole Pit", 10)
+    @guest4=Guest.new("The Right Honarable Lt Hammy Cham Bum the 3rd MP OBE MBE", "Music Ain't No Thang", 50)
 
     @reception=Reception.new("Big Dave's Big Boys Karaoke Shack")
+
+    @groups = [@guest1, @guest2, @guest4]
 
   end
 
@@ -39,6 +42,13 @@ class RoomsTest < MiniTest::Test
     @reception.guest_pays_bill(@guest1, @room1)
     assert_equal(85, @guest1.cash)
   end
+
+  def test_multiple_guests_check_in
+    group = @reception.group_check_in(@groups)
+    # @reception.group_check_in(@groups)
+    assert_equal(3, group)
+  end
+
 
 end
 
