@@ -31,7 +31,7 @@ class Reception
 
   def guest_pays_bill(guest, room)
     if welcome(guest, room) == true
-      guest.pays(guest.cash, room.price)   
+      guest.pays(guest, room.price)  
     end
   end
 
