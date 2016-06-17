@@ -8,8 +8,16 @@ class Room
 
   def initialize(name)
     @name = name
+    @guests = []
     @playlist = []
   end
 
+  def add_song(song)
+    @playlist << song
+  end
+
+  def number_of_songs
+    @playlist.length
+  end
 
 end
