@@ -1,3 +1,5 @@
+require_relative 'songs'
+
 class Room
 
   attr_reader(:name)
