@@ -35,10 +35,12 @@ class Reception
     end
   end
 
-  def group_check_in(welcome)
-    result = @groups.select { |group| group.welcome }
-    return result.length
-  end
+  # def group_check_in()
+
+  #   @groups.each { |member| welcome(member, room)}
+  #   # result = @groups.select { |group| group.welcome }
+  #   # return result.length
+  # end
 
 end
 

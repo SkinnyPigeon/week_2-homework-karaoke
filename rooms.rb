@@ -41,7 +41,7 @@ class Room
 
 
   def form_groups(names)
-    number_of_guests() < @capacity ? @groups << names : "Sorry pal, that's a firehazard. That could be my license."
+    number_in_group() < @capacity ? @groups << names : "Sorry pal, that's a firehazard. That could be my license."
   end
 
 

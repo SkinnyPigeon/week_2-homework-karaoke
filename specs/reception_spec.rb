@@ -22,7 +22,7 @@ class RoomsTest < MiniTest::Test
 
     @reception=Reception.new("Big Dave's Big Boys Karaoke Shack")
 
-    @groups = [@guest1, @guest2, @guest4]
+    @groups = [@guest1, @guest2, @guest3]
 
   end
 
@@ -43,11 +43,12 @@ class RoomsTest < MiniTest::Test
     assert_equal(85, @guest1.cash)
   end
 
-  def test_multiple_guests_check_in
-    group = @reception.group_check_in(@groups)
-    # @reception.group_check_in(@groups)
-    assert_equal(3, group)
-  end
+  # def test_multiple_guests_check_in
+
+  #   group = @reception.rooms.groups.number_in_group()
+  #   # @reception.group_check_in(@groups)
+  #   assert_equal(2, group)
+  # end
 
 
 end
