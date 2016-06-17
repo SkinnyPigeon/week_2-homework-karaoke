@@ -9,7 +9,6 @@ class SongsTest < MiniTest::Test
     @song2=Song.new("I'm Going To Kill Yo Mamma", "Iain and The Steamtrain", 2016, "Rocket Houselite")
     @song3=Song.new("Slow Roast", "Immortal Jane", 1906, "Sleeze Mode 8")
 
-    @songs = [ @song1, @song2, @song3 ]
   end
 
   def test_song_has_title

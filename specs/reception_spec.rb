@@ -15,9 +15,9 @@ class RoomsTest < MiniTest::Test
     @song2=Song.new("I'm Going To Kill Yo Mamma", "Iain and The Steamtrain", 2016, "Rocket Houselite")
     @song3=Song.new("Slow Roast", "Immortal Jane", 1906, "Sleeze Mode 8")
 
-    @guest1=Guest.new("Jonny Big-Tash", "Slow Roast")
-    @guest2=Guest.new("Stevie Winwood", "I'm Going To Kill Yo Mamma")
-    @guest3=Guest.new("The Entire Royal Philharmoic East Compton Rap Brigade's PA", "Deep Down In The Ole Pit")
+    @guest1=Guest.new("Jonny Big-Tash", "Slow Roast", 100)
+    @guest2=Guest.new("Stevie Winwood", "I'm Going To Kill Yo Mamma", 150)
+    @guest3=Guest.new("The Entire Royal Philharmoic East Compton Rap Brigade's PA", "Deep Down In The Ole Pit", 10)
 
   end
 

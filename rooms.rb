@@ -26,6 +26,7 @@ class Room
     number_of_guests() < @capacity ? @guests << name : "Sorry pal, that's a firehazard. That could be my license."
   end
 
+
   def remove_guest(name)
     @guests.delete(name)
   end

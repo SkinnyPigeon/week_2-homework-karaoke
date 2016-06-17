@@ -11,4 +11,10 @@ class Reception
     @drinks = drinks
   end
 
+  def welcome(name)
+    if name.can_afford 
+      add_guest(name)
+    end
+  end
+
 end
