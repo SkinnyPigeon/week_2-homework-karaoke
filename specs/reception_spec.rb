@@ -1,7 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/rg'
 require_relative '../rooms'
-require_relative '../songs'
+require_relative '../reception'
 require_relative '../guests'
 require 'pry-byebug'
 
@@ -21,47 +21,5 @@ class RoomsTest < MiniTest::Test
 
   end
 
-  def test_room_has_name
-    assert_equal("Nice 'n Sleezy", @room1.name)
-  end
-
-  def test_room_has_playlist
-    assert_equal([], @room1.playlist)
-  end
-
-  def test_add_song_to_room
-    @room1.add_song(@song1)
-    assert_equal(1, @room1.number_of_songs)
-  end
-
-  def test_add_guests_to_room
-    @room1.add_guest(@guest1)
-    @room1.add_guest(@guest2)
-    assert_equal(2,@room1.number_of_guests)
-  end
-
-  def test_remove_guest_from_room
-    @room1.add_guest(@guest1)
-    @room1.add_guest(@guest2)
-    @room1.remove_guest(@guest1)
-    assert_equal(1, @room1.number_of_guests)
-  end
-
-  def test_cannot_exceed_capacity
-    @room1.add_guest(@guest1)
-    @room1.add_guest(@guest3)
-    @room1.add_guest(@guest2)
-    assert_equal(2, @room1.number_of_guests)
-  end
 
 end
-
-
-
-
-
-
-
-
-
-
