@@ -1,4 +1,4 @@
-require_relative 'songs'
+require_relative 'playlist'
 require_relative 'guests'
 require 'pry-byebug'
 class Room
@@ -11,8 +11,5 @@ class Room
     @playlist = []
   end
 
-  def add_song_by_name(song)
-    @playlist << song.name
-  end
 
 end
