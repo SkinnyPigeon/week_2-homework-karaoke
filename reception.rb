@@ -29,6 +29,12 @@ class Reception
       return false
   end
 
+  def guest_pays_bill(guest, room)
+    if welcome(guest, room) == true
+      guest.pays(guest.cash, room.price)   
+    end
+  end
+
 end
 
 

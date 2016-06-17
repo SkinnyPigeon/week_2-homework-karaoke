@@ -3,7 +3,7 @@ require 'pry-byebug'
 
 class Guest
 
-  attr_reader(:name, :favourite_song, :cash)
+  attr_accessor(:name, :favourite_song, :cash)
 
   def initialize(name, favourite_song, cash)
     @name = name
@@ -27,4 +27,10 @@ class Guest
     end
   end
 
+  def pays(guest, ammount)
+    guest.cash -= ammount
+  end
+
 end
+
+

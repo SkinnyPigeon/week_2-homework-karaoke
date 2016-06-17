@@ -31,10 +31,14 @@ class RoomsTest < MiniTest::Test
   def test_welcome
     @reception.add_rooms(@room1)
     @reception.add_rooms(@room2)
-    assert_equal( true, @reception.welcome(@guest1, @room1) )    
+    assert_equal( true, @reception.welcome(@guest1, @room1) )      
     assert_equal( false, @reception.welcome(@guest3, @room2) )
   end
 
+  def test_guests_pay
+    @reception.guest_pays_bill(@guest1, @room1)
+    assert_equal(85, @guest1.cash)
+  end
 
 end
 

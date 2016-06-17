@@ -29,7 +29,12 @@ class GuestTest < MiniTest::Test
 
   def test_guest_can_afford_room
     assert_equal(true, @guest1.can_afford(@room1))
-    assert_equal("Get out of here before Big Dave crushes your broke ass", @guest3.can_afford(@room2))
+    assert_equal(false, @guest3.can_afford(@room2))
+  end
+
+  def test_pays
+      @guest1.pays(@guest1, @room1.price)
+    assert_equal(85, @guest1.cash)
   end
 
 
