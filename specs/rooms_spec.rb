@@ -68,8 +68,6 @@ class RoomsTest < MiniTest::Test
   end
 
 
-
-
 end
 
 

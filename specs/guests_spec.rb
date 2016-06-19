@@ -19,6 +19,7 @@ class GuestTest < MiniTest::Test
     @song3=Song.new("Slow Roast", "Immortal Jane", 1906, "Sleeze Mode 8")
   end
 
+
   def test_guests_have_names
     assert_equal("Jonny Big-Tash", @guest1.name)
   end

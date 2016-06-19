@@ -43,13 +43,6 @@ class RoomsTest < MiniTest::Test
     assert_equal(85, @guest1.cash)
   end
 
-  # def test_multiple_guests_check_in
-
-  #   group = @reception.rooms.groups.number_in_group()
-  #   # @reception.group_check_in(@groups)
-  #   assert_equal(2, group)
-  # end
-
 
 end
 

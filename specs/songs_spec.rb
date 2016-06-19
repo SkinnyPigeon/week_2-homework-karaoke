@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'minitest/rg'
+require 'pry-byebug'
 require_relative '../songs'
 
 class SongsTest < MiniTest::Test
@@ -23,18 +24,9 @@ class SongsTest < MiniTest::Test
     assert_equal(1984, @song1.year)
   end
 
-  # def test_song_has_genre
-  #   assert_equal("Smooth Mild Funkcore", @song1.genre)
-  # end
-
-  def test_song_genre
-    track_style = @songs.song_genre("Slow Roast")
-    assert_equal(:genre, song_genre)
+  def test_song_has_genre
+    assert_equal("Smooth Mild Funkcore", @song1.genre)
   end
-  # def test_pet_merlin_is_cat
-  #    pet_type = @pet_shop.pet_type("Merlin")
-  #    assert_equal(:cat, pet_type)
-  # end
 
 
 end
